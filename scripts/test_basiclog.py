@@ -130,7 +130,7 @@ def data_collection_thread():
             print("Connected to Crazyflie!")
             
             with SyncLogger(scf, lg_stab) as logger:
-                endTime = time.time() + 10
+                endTime = time.time() + 60  # Changed from 10 to 60 seconds
 
                 for log_entry in logger:
                     if not running:
